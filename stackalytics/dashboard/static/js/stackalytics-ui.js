@@ -95,7 +95,7 @@ function renderTableAndChart(url, container_id, table_id, chart_id, link_param, 
 
         $.ajax({
             url: makeURI(url),
-            dataType: "json",
+            dataType: "jsonp",
             success: function (data) {
 
                 var tableData = [];
@@ -367,7 +367,7 @@ function initSingleSelector(name, api_url, select2_extra_options, change_handler
 
     $.ajax({
         url: api_url,
-        dataType: "json",
+        dataType: "jsonp",
         success: function (data) {
             var initial_value = getUrlVars()[name];
             if (initial_value) {

@@ -70,12 +70,94 @@
 
     {% block head %}{% endblock %}
 
+	<link rel="alternate" type="application/rss+xml" href="http://www.mirantis.com/feed/" title="Mirantis latest posts" />
+	<link rel="alternate" type="application/rss+xml" href="http://www.mirantis.com/comments/feed/" title="Mirantis latest comments" />
+	<link rel="pingback" href="http://www.mirantis.com/xmlrpc.php" />
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/mirantis.css') }}">
+
 </head>
 
 <body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WK9FMJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WK9FMJ');</script>
+<!-- End Google Tag Manager -->
+
 <div id="content">
 
+
     {% block body %}{% endblock %}
+
+    <div id="dummy">
+    </div>
+	<div id="footer">
+        <div id="footer_content">
+<div id="text-5" class="widget widget_text"><!--Footer-->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0"
+           id="foottable">
+        <tr>
+            <td valign="top" width="33%">
+                <span class="fgeneral">© 2005&ndash;2017</span>
+                <span class="fgeneralblue">All Rights Reserved</span>
+            </td>
+            <td valign="top" width="33%">
+                <span class="fgeneral">Mirantis Inc.<br>
+                <span class="fslogan">Pure Play OpenStack.</span></span>
+            </td>
+            <td valign="top" width="33%">
+                <span class="fgeneral">525 Almanor Ave 4<sup><small>th</small></sup> Floor, Sunnyvale, CA 94085</span><br/>
+                <span class="fgeneral">+1-650-963-9828</span>
+            </td>
+        </tr>
+    </table>
+    <div class="clear"></div></div><div id="DNSindicator"></div>
+        </div>
+	</div><!--#footer-->
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter21608947 = new Ya.Metrika({id: 21608947,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        trackHash: true,
+                        ut: "noindex"});
+                } catch (e) {
+                }
+            });
+            var n = d.getElementsByTagName("script")[0],
+                    s = d.createElement("script"),
+                    f = function () {
+                        n.parentNode.insertBefore(s, n);
+                    };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else {
+                f();
+            }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript>
+        <div><img src="//mc.yandex.ru/watch/21608947?ut=noindex"
+                  style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 
 </div>
 </body>
